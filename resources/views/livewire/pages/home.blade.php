@@ -1,3 +1,5 @@
-<div>
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
+<div class="containerPage">
+    <section id="startHome">
+        <h1>Home</h1>
+    </section>
 </div>
