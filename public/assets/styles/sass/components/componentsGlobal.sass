@@ -10,38 +10,37 @@
     display: grid
     gap: 1rem
     grid-template-columns: minmax(0,2fr) minmax(0,6fr)
-    #leftLayout, #rigtLayout, #generalHeader, #generalHeader nav
-        display: flex
-        flex-direction: column
     #leftLayout
-        gap: 3rem
+        background: #121212
+        gap: 2rem
+        @include helpers.flex-columm-space-between
+        padding: 1rem
     #rigtLayout
+        @include helpers.flex-columm-space-between
+        //background: #121212
         background: #121212
         position: sticky
         top: 0
         bottom: 0
-        justify-content: space-between
-        min-height: 100vh
+        right: 0
+        height: 100vh
         padding: 2rem
         box-shadow: 0 .2rem .5rem rgba(0,0,0,.4)        
 
 
 //generalHeader
 #generalHeader
-    gap: 2rem
+    @include helpers.flex-columm-gap(3rem)
     nav
-        gap: 1.4rem
+        @include helpers.flex-columm-gap(1.4rem)
     #serach
-        display: flex
-        align-items: center
-        justify-content: space-between
+        @include helpers.flex-center-space-between
         height: 35px
         width: 100%
         border-radius: .2rem
         padding: 0 1rem
         border: .1px solid map-get(variables.$colors, textColor)
         input
-            
             font-size: 1.1rem
             background: transparent
             color: map-get(variables.$colors, textColor) 
@@ -49,14 +48,12 @@
                 color: map-get(variables.$colors, textColor) 
         .bi-search
             font-size: 1.5rem
-    #ul-map, #ul-links
-        display: flex
-    #ul-map, #ul-links
-        gap: 2rem
     #ul-links
+        @include helpers.flex-center-gap(1.2rem) 
+        flex-wrap: wrap
         li
             background: #a5a2a263
-            padding: 0.9rem 1.3rem
+            padding: 0.9rem 1.2rem
             border-radius: .4rem
             &:hover
                 opacity: 2
@@ -67,12 +64,10 @@
                 font-size: 1.2rem  
                 font-weight: bold
     #ul-map
-        align-items: center    
+        @include helpers.flex-center-gap(2rem) 
         li
             a
-                @include helpers.flex-center-center
-                display: flex
-                align-items: center 
+                @include helpers.flex-center-gap(.6rem) 
                 gap: .6rem
                 &:hover
                     color: map-get(variables.$Hovercolors, one)
@@ -103,18 +98,42 @@
         font-size: 1.3rem
     ul
         margin-top: 1.3rem
-        display: flex
-        align-items: center
+        @include helpers.flex-center-gap(1rem)
         flex-wrap: wrap
-        gap: 1rem
         li
             a
-                display: flex
-                align-items: center
-                gap: 0.4rem
+                @include helpers.flex-center-gap(.4rem)
                 &:hover
                     color: map-get(variables.$Hovercolors, one)
                 span:first-child
                     font-size: 1.7rem
                 span:last-child
                     font-size: 1.2rem
+// logo   
+#logo
+    @include helpers.flex-center-gap(.4rem)
+    .desc
+        font-size: 1.3rem
+        font-weight: 600
+    &:hover
+        color: map-get(variables.$Hovercolors, one)
+
+// footerGeneral
+#footerGeneral
+    background: #121212
+    padding: 2rem 0
+    .container
+        @include helpers.flex-columm-gap(1.4rem)
+    #logo
+        justify-content: center
+    #map-site, #links-social
+        @include helpers.flex-center-gap(1.5rem)
+        justify-content: center
+        a:hover
+            color: map-get(variables.$Hovercolors, one)
+    #map-site
+        a
+            font-size: 1.1rem
+    #links-social
+        a
+            font-size: 1.3rem

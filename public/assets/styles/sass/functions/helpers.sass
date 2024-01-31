@@ -2,3 +2,36 @@
     display: flex
     align-items: center
     justify-content: center
+
+@mixin flex-center-space-between
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+@mixin flex-columm
+    display: flex
+    flex-direction: column
+
+@mixin flex-columm-space-between
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+@mixin flex-center
+    display: flex
+    align-items: center
+
+@mixin flex-center-gap($gap)
+    display: flex
+    align-items: center
+    gap: $gap
+
+@mixin flex-columm-gap($gap)
+    display: flex
+    flex-direction: column
+    gap: $gap
+
+@mixin flex-center
+    display: flex
+    align-items: center

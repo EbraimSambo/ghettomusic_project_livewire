@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Pages\Home;
+use App\Livewire\Pages\Music\MusicCreate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', Home::class)->name('home');
+
+Route::get('/create', MusicCreate::class)->name('create');
+
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
