@@ -65,12 +65,18 @@ img {
   color: #fff;
 }
 #appLayout #leftLayout {
-  background: #121212;
-  gap: 2rem;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+}
+#appLayout #leftLayout main, #appLayout #leftLayout footer {
+  background: #121212;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+#appLayout #leftLayout main {
+  padding: 3rem 1rem;
 }
 #appLayout #rigtLayout {
   display: flex;
@@ -241,6 +247,102 @@ img {
   font-size: 1.1rem;
 }
 #footerGeneral #links-social a {
+  font-size: 1.3rem;
+}
+
+.load {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: rgba(165, 162, 162, 0.3882352941);
+  animation: loading 1s linear infinite;
+}
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#containerPage {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#singlePage {
+  margin-top: 4rem;
+}
+#singlePage .container .cover {
+  height: 400px;
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem auto;
+}
+#singlePage .container .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#singlePage .container .desc .containerbuttons {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+#singlePage .container .desc .containerbuttons .load-btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+#singlePage .container .desc .description {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  align-items: center;
+}
+#singlePage .container .desc .description h1 {
+  font-size: 1.7rem;
+}
+#singlePage .container .desc .description p {
+  font-size: 1.2rem;
+}
+#singlePage .container .desc .counter {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  text-align: center;
+}
+#singlePage .container .desc .counter span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#music-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+#music-container .card {
+  position: relative;
+}
+#music-container .card a {
+  padding: 2rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+  background: rgba(75, 73, 73, 0.337254902);
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+#music-container .card a .cover {
+  height: 200px;
+}
+#music-container .card a h2 {
   font-size: 1.3rem;
 }
 

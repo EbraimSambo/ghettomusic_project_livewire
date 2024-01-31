@@ -1,0 +1,40 @@
+@use '../functions/variables'
+@use '../functions/helpers'
+
+#containerPage
+    margin-top: 4rem
+    @include helpers.flex-columm-gap(3rem)
+
+#singlePage
+    margin-top: 4rem
+    .container
+        .cover
+            height: 400px
+            max-width: 400px
+            width: 100%
+            margin: 2rem auto
+        .desc
+            @include helpers.flex-columm-gap(1.5rem)
+            .containerbuttons
+                margin: 0 auto
+                @include helpers.flex-center-gap(1.7rem)
+                .load-btn
+                    display: flex
+                    gap: 1rem
+                    align-items: center
+            .description
+                margin: 0 auto
+                @include helpers.flex-columm-gap(1.7rem)
+                align-items: center
+                h1
+                    font-size: 1.7rem
+                p
+                    font-size: 1.2rem
+            .counter
+                margin: 0 auto
+                @include helpers.flex-columm-gap(1.7rem)
+                text-align: center
+                span
+                    font-size: 1.1rem
+                    font-weight: bold
+                

@@ -1,6 +1,23 @@
 @use '../functions/variables'
 @use '../functions/helpers'
 
+#music-container
+    margin-top: 2rem
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+    .card
+        position: relative
+        a
+            padding: 2rem
+            box-shadow: 0 .2rem .5rem rgba(0,0,0,.4)
+            background: #4b494956
+            border-radius: .3rem
+            @include helpers.flex-columm-gap(1.2rem)
+            .cover
+                height: 200px
+            h2
+                font-size: 1.3rem
 #create-container
     padding-top: 3rem
     h1

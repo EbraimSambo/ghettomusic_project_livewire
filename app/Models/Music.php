@@ -42,7 +42,7 @@ class Music extends Model
          parent::boot();
 
         static::creating(function ($model) {
-            $model->slug = Str::orderedUuid();//.'-' .now();
+            $model->slug = Str::uuid(20);//.'-' .now();
             $model->search = $model->title .' ' .$model->artist;
         });
 

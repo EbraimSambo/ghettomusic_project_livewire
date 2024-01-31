@@ -1,7 +1,9 @@
 <?php
 
 use App\Livewire\Pages\Home;
+use App\Livewire\Pages\Music\Categores;
 use App\Livewire\Pages\Music\MusicCreate;
+use App\Livewire\Pages\Music\Single;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Home::class)->name('home');
 
 Route::get('/create', MusicCreate::class)->name('create');
+
+Route::get('/categores/{category}', Categores::class)->name('categores');
+
+Route::get('/show/{slug}', Single::class)->name('music.single');
 
 
 Route::view('dashboard', 'dashboard')

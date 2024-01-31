@@ -11,10 +11,14 @@
     gap: 1rem
     grid-template-columns: minmax(0,2fr) minmax(0,6fr)
     #leftLayout
-        background: #121212
-        gap: 2rem
+        gap: 1rem
         @include helpers.flex-columm-space-between
         padding: 1rem
+        main, footer
+            background: #121212
+            box-shadow: 0 .2rem .5rem rgba(0,0,0,.4)
+        main
+            padding: 3rem 1rem
     #rigtLayout
         @include helpers.flex-columm-space-between
         //background: #121212
@@ -137,3 +141,15 @@
     #links-social
         a
             font-size: 1.3rem
+        
+    
+.load
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    border: 2px solid #ccc
+    border-top-color: #a5a2a263
+    animation: loading 1s linear infinite
+    @keyframes loading
+        to
+            transform: rotate(360deg)

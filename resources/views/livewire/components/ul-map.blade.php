@@ -1,5 +1,5 @@
 <ul id="ul-map">
-    <li><a href="" wire:navigate>
+    <li><a href="{{ route('home')}}" wire:navigate>
         <span class="material-symbols-outlined">
         home
         </span> 
