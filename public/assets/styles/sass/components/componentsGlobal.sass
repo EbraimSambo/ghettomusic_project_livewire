@@ -68,19 +68,17 @@
                 font-size: 1.2rem  
                 font-weight: bold
     #ul-map
-        @include helpers.flex-center-gap(2rem) 
+        @include helpers.flex-center-gap(.7rem) 
         li
             a
-                @include helpers.flex-center-gap(.6rem) 
-                gap: .6rem
+                @include helpers.flex-center-gap(.4rem) 
                 &:hover
                     color: map-get(variables.$Hovercolors, one)
                 span:first-child
-                    font-size: 2.3rem
+                    font-size: 2rem
                 span:last-child
                     font-weight: 700
-                    font-size: 1.3rem
-                    padding-top: 0.3rem
+                    font-size: 1.2rem
 // logo
 
 // headePlaceholder

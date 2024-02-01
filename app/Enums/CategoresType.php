@@ -20,4 +20,33 @@ enum CategoresType: string {
             self::AFROHOUSE => 'bi-dice-5',
         };
     }
+
+    public function typeIndex(): array {
+        return match ($this) {
+            self::RAP => [
+                'title'=> 'Rap',
+                'cover'=>'images/grafics/4.jpg',
+            ],
+            self::KIZOMBA => [
+                'title'=> 'Kizomba',
+                'cover'=>'images/grafics/2.jpg'
+            ],
+            self::KUDURO =>[
+                'title'=> 'Kuduro',
+                'cover'=>'images/grafics/6.jpg'
+            ],
+            self::SEMBA => [
+                'title'=> 'Semba',
+                'cover'=>'images/grafics/1.jpg'
+            ],
+            self::AFROBEAT => [
+                'title'=> 'Afrobeat',
+                'cover'=>'images/grafics/3.jpg'
+            ],
+            self::AFROHOUSE => [
+                'title'=> 'Afrohouse',
+                'cover'=>'images/grafics/5.jpg'
+            ],
+        };
+    }
 }

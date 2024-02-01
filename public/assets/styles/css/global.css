@@ -147,24 +147,22 @@ img {
 #generalHeader #ul-map {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 0.7rem;
 }
 #generalHeader #ul-map li a {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  gap: 0.6rem;
+  gap: 0.4rem;
 }
 #generalHeader #ul-map li a:hover {
   color: rgba(211, 209, 209, 0.6588235294);
 }
 #generalHeader #ul-map li a span:first-child {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 #generalHeader #ul-map li a span:last-child {
   font-weight: 700;
-  font-size: 1.3rem;
-  padding-top: 0.3rem;
+  font-size: 1.2rem;
 }
 
 #headePlaceholder a {
@@ -273,52 +271,6 @@ img {
 
 #singlePage {
   margin-top: 4rem;
-}
-#singlePage .container .cover {
-  height: 400px;
-  max-width: 400px;
-  width: 100%;
-  margin: 2rem auto;
-}
-#singlePage .container .desc {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-#singlePage .container .desc .containerbuttons {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 1.7rem;
-}
-#singlePage .container .desc .containerbuttons .load-btn {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-#singlePage .container .desc .description {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.7rem;
-  align-items: center;
-}
-#singlePage .container .desc .description h1 {
-  font-size: 1.7rem;
-}
-#singlePage .container .desc .description p {
-  font-size: 1.2rem;
-}
-#singlePage .container .desc .counter {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.7rem;
-  text-align: center;
-}
-#singlePage .container .desc .counter span {
-  font-size: 1.1rem;
-  font-weight: bold;
 }
 
 #music-container {
@@ -440,6 +392,104 @@ img {
   margin-top: 1rem;
   height: 240px;
   width: 240px;
+}
+
+.containerOuthers {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#singlePage .container .cover {
+  height: 400px;
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem auto;
+}
+#singlePage .container .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#singlePage .container .desc .containerbuttons {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+#singlePage .container .desc .containerbuttons .load-btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+#singlePage .container .desc .description {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  align-items: center;
+}
+#singlePage .container .desc .description h1 {
+  font-size: 1.7rem;
+}
+#singlePage .container .desc .description h2 {
+  font-size: 1.5rem;
+}
+#singlePage .container .desc .description h2 span {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+#singlePage .container .desc .description p {
+  font-size: 1.2rem;
+}
+#singlePage .container .desc .description span {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+#singlePage .container .desc .counter {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  text-align: center;
+}
+#singlePage .container .desc .counter span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.category-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.category-container li {
+  position: relative;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+.category-container li, .category-container li img {
+  border-radius: 2rem;
+}
+.category-container h2 {
+  position: absolute;
+  top: 7%;
+  left: 7%;
+  z-index: 90;
+  font-size: 1.9rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  padding: 0.6rem 1rem;
+  background: rgba(0, 0, 0, 0.368627451);
+  border-radius: 0.4rem;
+  text-shadow: 1px 1px 1px #111;
+}
+
+#notfound p {
+  font-size: 1.4rem;
+  margin-top: 0.9rem;
+  line-height: 2rem;
 }
 
 /*# sourceMappingURL=global.css.map */

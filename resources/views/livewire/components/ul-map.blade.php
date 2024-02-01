@@ -6,10 +6,19 @@
         <span>Home</span> 
     </a></li>
 
-    <li><a href="" wire:navigate>
+    <li><a href="{{ route('music.music') }}" wire:navigate>
         <span class="material-symbols-outlined">
             play_circle
         </span>
         <span>Músicas</span> 
     </a></li>
+
+    <li><a href="{{ route('music.categores.categores') }}" wire:navigate>
+        <span class="material-symbols-outlined">
+            lists
+            </span>
+        <span>Categórias</span> 
+    </a></li>
+
 </ul>
+

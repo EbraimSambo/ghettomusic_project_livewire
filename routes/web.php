@@ -1,8 +1,10 @@
 <?php
 
 use App\Livewire\Pages\Home;
-use App\Livewire\Pages\Music\Categores;
+use App\Livewire\Pages\Music\Categores\CategoresIndex;
+use App\Livewire\Pages\Music\Categores\Category;
 use App\Livewire\Pages\Music\MusicCreate;
+use App\Livewire\Pages\Music\MusicIndex;
 use App\Livewire\Pages\Music\Single;
 use Illuminate\Support\Facades\Route;
 
@@ -19,12 +21,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class)->name('home');
 
-Route::get('/create', MusicCreate::class)->name('create');
+Route::prefix('music')->name('music.')->group(function () {
 
-Route::get('/categores/{category}', Categores::class)->name('categores');
+    Route::get('/', MusicIndex::class)->name('music');
 
-Route::get('/show/{slug}', Single::class)->name('music.single');
+    Route::get('/create', MusicCreate::class)->name('create');
 
+    Route::prefix('categores')->name('categores.')->group(function(){
+        Route::get('/', CategoresIndex::class)->name('categores');
+        Route::get('/category/{category}', Category::class)->name('category');
+    });
+    
+    Route::get('/show/{slug}', Single::class)->name('single');
+
+});
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

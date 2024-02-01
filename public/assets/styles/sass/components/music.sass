@@ -18,6 +18,8 @@
                 height: 200px
             h2
                 font-size: 1.3rem
+
+
 #create-container
     padding-top: 3rem
     h1
@@ -94,3 +96,77 @@
                         margin-top: 1rem
                         height: 240px
                         width: 240px
+
+.containerOuthers
+    margin-top: 4rem
+    @include helpers.flex-columm-gap(2rem)
+
+#singlePage
+    .container
+        .cover
+            height: 400px
+            max-width: 400px
+            width: 100%
+            margin: 2rem auto
+        .desc
+            @include helpers.flex-columm-gap(1.5rem)
+            .containerbuttons
+                margin: 0 auto
+                @include helpers.flex-center-gap(1.7rem)
+                .load-btn
+                    display: flex
+                    gap: 1rem
+                    align-items: center
+            .description
+                margin: 0 auto
+                @include helpers.flex-columm-gap(1.7rem)
+                align-items: center
+                h1
+                    font-size: 1.7rem
+                h2
+                    font-size: 1.5rem
+                    span
+                        font-size: 1.3rem
+                        font-weight: 800
+                p
+                    font-size: 1.2rem
+                span
+                    font-size: 1.1rem
+                    font-weight: 400
+            .counter
+                margin: 0 auto
+                @include helpers.flex-columm-gap(1.7rem)
+                text-align: center
+                span
+                    font-size: 1.1rem
+                    font-weight: bold
+
+
+.category-container
+    margin-top: 2rem
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+    li
+        position: relative
+        box-shadow: 0 .2rem .5rem rgba(0,0,0,.4)
+        &, img
+            border-radius: 2rem
+    h2
+        position: absolute
+        top: 7%
+        left: 7%
+        z-index: 90
+        font-size: 1.9rem
+        font-weight: bold
+        letter-spacing: 0.3rem
+        padding: 0.6rem 1rem
+        background: #0000005e
+        border-radius: .4rem
+        text-shadow: 1px 1px 1px #111
+
+#notfound
+    p
+        font-size: 1.4rem
+        margin-top: 0.9rem
+        line-height: 2rem

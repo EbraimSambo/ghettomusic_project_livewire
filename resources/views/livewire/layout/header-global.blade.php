@@ -6,7 +6,7 @@
         <livewire:components.ul-links>
     </nav>
     <div id="pubNavbar">
-        <h3> Estílo Musicais </h3>
+        <h3> <a href="{{ route('music.categores.categores') }}" wire:navigate>Estílo Musicais</a> </h3>
         <livewire:components.categorestype>
     </div>
 </header>
